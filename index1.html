@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>mynta-quiz</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--Slide Show Css -->
+    <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" />
+    <!-- custom CSS here -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <style>
+        .filterDiv {
+            display: none;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .mi-slider button {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="assets/img/1634161.png" width="50" height="50"></a>
+            </div>
+            <br>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index1.html">Quiz</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Mail: </strong>snigdhapatra1894@gmail.com</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><strong>Address: </strong>
+                                <div>
+                                    123, Mumbai,<br />
+                                    Any Location, India
+                                </div>
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+                    </div>
+                    &nbsp;
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h3> Take fashion quiz :</h3>
+                <div class="main box-border">
+                    <div id="mi-slider" class="mi-slider">
+                        <ul>
+                            <li>
+                                <h4>1) Activities you spend most time on:</h4>
+                            </li><br>
+                            <li>
+                                <button class="btn" role="button" onclick="filterSelection('formal')">
+                                    <img src="new/work.jpeg" width="120" height="120">
+                                    <h4>Work</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection('athle')">
+                                    <img src="new/run.jpeg" width="120" height="120">
+                                    <h4>Workout</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection('party')">
+                                    <img src="new/party.jpeg" width="120" height="120">
+                                    <h4>Party</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection('casual')">
+                                    <img src="new/16415fcf48c3e006429d2f08a242f950.jpg" width="120" height="120">
+                                    <h4>Outdoors</h4>
+                                </button>
+                            </li>
+                        </ul>
+                        <ul>
+
+                            <li>
+                                <h4>2) Describe your style :</h4>
+                            </li><br>
+                            <li>
+                                <button class="btn" onclick="filterSelection1('chic')">
+                                    <img src="new/chic.jpg" width="120" height="120">
+                                    <h4>Chic</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection1('boho')">
+                                    <img src="new/boho.jpg" width="120" height="120">
+                                    <h4>Boho</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection1('Ethnic')">
+                                    <img src="new/ethnic.jpg" width="120" height="120">
+                                    <h4>Ethnic</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection1('casual')">
+                                    <img src="new/casual.jfif" width="120" height="120">
+                                    <h4>Casual</h4>
+                                </button>
+                            </li>
+                        </ul>
+                        <ul>
+
+                            <li>
+                                <h4>3) Upcoming Events :</h4>
+                            </li><br>
+                            <li>
+                                <button class="btn" onclick="filterSelection2('casual')">
+                                    <img src="new/travel.jpg" width="120" height="120">
+                                    <h4>Travel Plan &nbsp &nbsp</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection2('wed')">
+                                    <img src="new/wedding.jpg" width="120" height="120">
+                                    <h4>&nbsp  Wedding  &nbsp</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection2('party')">
+                                    <img src="new/cocktail.jpg" width="120" height="120">
+                                    <h4>Formal Event </h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection2('ethnic')">
+                                    <img src="new/festival.jpg" width="120" height="120">
+                                    <h4>&nbsp &nbsp Festival  &nbsp &nbsp</h4>
+                                </button>
+                            </li>
+                        </ul>
+                        <ul>
+
+                            <li>
+                                <h4>4) Fashion Icon :</h4>
+                            </li><br>
+                            <li>
+                                <button class="btn" onclick="filterSelection3('rih')">
+                                    <img src="new/rihanna.jpg" width="120" height="120">
+                                    <h4>Rihanna Fenty</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection3('kate')">
+                                    <img src="new/kate.jpg" width="120" height="120">
+                                    <h4>Kate Middleton</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection3('jlo')">
+                                    <img src="new/lopez.jpg" width="120" height="120">
+                                    <h4>Jennifer Lopez</h4>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn" onclick="filterSelection3('hep')">
+                                    <img src="new/audery.jpg" width="120" height="120">
+                                    <h4>Audery Hepburn</h4>
+                                </button>
+                            </li>
+                        </ul>
+                        <nav>
+                            <a href="#">Question 1</a>
+                            <a href="#">Question 2</a>
+                            <a href="#">Question 3</a>
+                            <a href="#">Question 4</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!-- /.col -->
+
+
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Clothing</a></li>
+                        <li class="active">Women's Clothing</li>
+                    </ol>
+                </div>
+                <!-- /.div -->
+                <div class="row">
+                    <div class="btn-group alg-right-pad">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Sort Products &nbsp;
+      <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">By Price Low</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Price High</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Popularity</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Reviews</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="filterDiv formal kate">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1294879/2016/4/6/11459942588315-Purple-Feather-Black-Pencil-Skirt-6751459942587971-3.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Purple Feather </a></h3>
+                                    <p><a href="#">Pencil Skirt </a></p>
+                                    <p>Price : <strong>Rs 479</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv athle casual ">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11780490/2020/10/16/2145c2b0-ced7-4edf-8f5d-b1939dab31681602840694003-Reebok-Women-Tshirts-5201602840692568-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Reebok </a></h3>
+                                    <p>Women workout Tshirt</p>
+                                    <p>Price : <strong>Rs 1019</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv athle casual">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11780510/2020/10/16/5697eaa2-e46e-4f03-b911-2b45f3903f221602839562053-Reebok-Women-Tshirts-1081602839560436-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Reebok </a></h3>
+                                    <p>WOR ready COM training </p>
+                                    <p>Price : <strong>Rs 1049</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv athle casual">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11751466/2020/9/5/ff178bcd-5fa3-4c6e-a0b2-b235c9ee43811599277954428NikeEssentialWomens78RunningPants1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Nike </a></h3>
+                                    <p>Women Running Pant </p>
+                                    <p>Price : <strong>Rs 4196</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv party rih">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10780618/2019/11/5/6c202fe5-83e4-407b-8463-327181bcb0d91572933353407-MISH-Women-Navy-Blue-Solid-Pleated-Sheath-Dress-168157293335-1.jpg" width="280"
+                                    height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Mish </a></h3>
+                                    <p>Wrap Dress </p>
+                                    <p>Price : <strong>Rs 1860</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv formal chic">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12222036/2020/10/6/d7ae3065-98d4-42d0-b244-d2b18802ff101601959656577-SASSAFRAS-Women-Black-Solid-High-Neck-Cropped-Top-4441601959-1.jpg" width="280"
+                                    height="280">
+                                <div class="caption">
+                                    <h3><a href="#">SASSAFRAS</a></h3>
+                                    <p>High Neck Top </p>
+                                    <p>Price : <strong>Rs 549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual boho">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/7206115/2018/8/23/51ce9207-3ba1-4a65-8f01-cd2d16f2b0dd1535005074226-na-2651535005072234-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Mayra</a></h3>
+                                    <p> Casual Blouson Top </p>
+                                    <p>Price : <strong>Rs 389</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual chic formal">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1642963/2016/12/30/11483095168484-Pepe-Jeans-Women-Black-Regular-Fit-Mid-Rise-Clean-Look-Jeans-8261483095168172-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Pepe Jeans</a></h3>
+                                    <p> Women Jeans </p>
+                                    <p>Price : <strong>Rs 2399</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv party jlo">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/9963799/2019/6/15/2eb75448-4456-4074-9ac2-4939d11165bd1560572079714-DODO--MOA-Women-Dresses-7741560572078158-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">DODO & MOA</a></h3>
+                                    <p>Black Sequinned Dress </p>
+                                    <p>Price : <strong>Rs 2699</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv party jlo">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13042682/2020/12/15/e64ddf38-b958-4482-976f-568ef12aa0da1608024567705-ONLY-Silver-Sequined-V-Neck-Top-3911608024566479-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">ONLY </a></h3>
+                                    <p>Sequin Top </p>
+                                    <p>Price : <strong>Rs 1649</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv formal chic">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/3/26/a979939e-e1ad-45e5-917e-e79b143a7dfe1616745801025-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">H&M </a></h3>
+                                    <p>Women Beige Solid Fitted Jacket </p>
+                                    <p>Price : <strong>Rs 2299</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv boho ethnic">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11369254/2020/6/4/3c98d99d-00ef-43e6-bd54-193c31edf0551591245233085ModaRapidoWomenOliveGreenMustardYellowPrintedTopSweatshirtsC1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">W </a></h3>
+                                    <p>Women printed Harem Pants </p>
+                                    <p>Price : <strong>Rs 1019</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual rih">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/9931987/2019/8/1/62c00d85-ec45-43be-b223-c3af01399dee1564645299665-DressBerry-Women-Olive-green--Pink-Printed-Top-5931564645298-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Dressbery</a></h3>
+                                    <p>Dressbery </p>
+                                    <p>Price : <strong>Rs 749</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual boho">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2393056/2018/7/26/4503f2c8-beec-45ad-a3bf-6ca03a5fea021532604066609-DressBerry-Women-Tops-9201532604066446-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Dressbery </a></h3>
+                                    <p>Boho Top </p>
+                                    <p>Price : <strong>Rs 799</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv kate hep">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/11/30/887b8ab9-18f8-4653-bb77-7e227c004cf61606747986803-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">FableStreet </a></h3>
+                                    <p>Trench Coat</p>
+                                    <p>Price : <strong>Rs 2499</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv ethnic wed">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10808272/2019/10/30/5a8714bc-bef0-4f18-9fe6-ca27b5be69c61572436729830-AHIKA-Women-Kurtas-241572436727174-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Ahika </a></h3>
+                                    <p>Printed Straight Kurta</p>
+                                    <p>Price : <strong>Rs 2499</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv ethnic wed">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2110558/2018/4/13/11523617167748-Vishudh-Women-Black--Gold-Toned-Printed-Straight-Kurta-9041523617167566-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Visudh </a></h3>
+                                    <p>Printed Kurta</p>
+                                    <p>Price : <strong>Rs 599</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv ethnic wed">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/7186142/2021/3/29/8b3e3d3c-619c-4c1a-bc0e-0b38d7052e8b1617000894042-Anouk-Women-Blue-Printed-Kurta-with-Trousers--Dupatta-783161-1.jpg" width="280"
+                                    height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Anouk </a></h3>
+                                    <p>Kurta Set</p>
+                                    <p>Price : <strong>Rs 1749</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual chic">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13287876/2021/1/5/6de83b79-6115-4f7c-9b8f-dcfdc686d98d1609840645468-Popnetic-Women-Shorts-3741609840643563-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Popnetic </a></h3>
+                                    <p>Women Cotton Shorts</p>
+                                    <p>Price : <strong>Rs 849</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual chic">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2383148/2018/4/11/11523438389100-Mast--Harbour-Women-Blue-Washed-Regular-Fit-Denim-Shorts-5661523438388984-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> Mast & HarBour </a></h3>
+                                    <p>Denim Shorts</p>
+                                    <p>Price : <strong>Rs 1049</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv party wed">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10500432/2019/9/18/52efaef2-4201-477c-982f-9f792e23f6c41568790955385-Bollywood-Vogue-Purple-Floor-Length-Gown-2661568790954160-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> EthnoVogue </a></h3>
+                                    <p>Floral Gown</p>
+                                    <p>Price : <strong>Rs 2549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv party hep">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13411976/2021/1/21/71cd8dab-c9a6-4c27-9dab-c8eb200fc0cb1611222119560-DODO--MOA-Women-Dresses-2941611222117789-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> DODO & MOA </a></h3>
+                                    <p>Silk Dress</p>
+                                    <p>Price : <strong>Rs 2549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv kate hep">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/1/20/986aae0b-51a7-4047-b7dd-fc37a641376e1611128907360-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> DODO & MOA </a></h3>
+                                    <p> White Dress</p>
+                                    <p>Price : <strong>Rs 1549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv ethnic wed">
+
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/8/11/35643372-9a6a-45b5-a18a-af056a97b6e51565465392383-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> Mitera </a></h3>
+                                    <p>Saree</p>
+                                    <p>Price : <strong>Rs 1549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual chic">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/7/25/2da82277-23cf-474b-8815-f6cc8e884b971564055901027-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> Tokyo Talkies </a></h3>
+                                    <p>Checked Dress</p>
+                                    <p>Price : <strong>Rs 549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv party jlo">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/11/20/e05fb40e-0c63-4da0-a514-672b42bae8cd1574191969626-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> Athena </a></h3>
+                                    <p>Wrap Dress</p>
+                                    <p>Price : <strong>Rs 1549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv formal chic">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/9368953/2019/4/29/fa9c851e-4114-4362-90ab-9e79eeda83151556545181597-Marks--Spencer-Women-Pink-Straight-Fit-Solid-Regular-Trouser-1.jpg" width="280"
+                                    height="280">
+                                <div class="caption">
+                                    <h3><a href="#"> Marks & Spencer </a></h3>
+                                    <p>Trousers</p>
+                                    <p>Price : <strong>Rs 1549</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv party casual">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11962824/2020/6/18/169c07e2-2b4d-48ba-bc1d-b49201222e471592446543831MumbaiSlangChicWomenBlackPrintedFitandFlareDress1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">Mumbai Slang Chic </a></h3>
+                                    <p>Printed Dress </p>
+                                    <p>Price : <strong>Rs 799</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterDiv casual chic">
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13719322/2021/3/12/cedc6649-ddf3-4d66-8de2-12eff1cbf1761615546209583-Backless-Criss-Cross-Wide-Leg-Jumpsuit-1171615546208198-1.jpg" width="280" height="280">
+                                <div class="caption">
+                                    <h3><a href="#">iki Chic </a></h3>
+                                    <p> Beige jumpsuit </p>
+                                    <p>Price : <strong>Rs 2799</strong> </p>
+                                    <p>
+                                        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col -->
+    <!--js-->
+
+    <script>
+        var q1;
+        var q2;
+        var q3;
+        var q4;
+        filterSelection("all")
+        filterSelection1("all")
+        filterSelection2("all")
+        filterSelection3("all")
+
+        function filterSelection(c) {
+            q1 = c;
+        }
+
+        function filterSelection1(d) {
+            q2 = d;
+        }
+
+        function filterSelection1(e) {
+            q3 = e;
+        }
+
+        function filterSelection3(f) {
+            q4 = f;
+            fs();
+        }
+
+        function fs() {
+            var x, i, c, d, e, f;
+            c = q1;
+            d = q2;
+            e = q3;
+            f = q4;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            if (d == "all") d = "";
+            if (e == "all") e = "";
+            if (f == "all") f = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (((x[i].className.indexOf(c) > -1 || x[i].className.indexOf(d) > -1) || x[i].className.indexOf(e) > -1) || x[i].className.indexOf(f) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+    </script>
+    <!--Footer -->
+
+    <div class="col-md-12 end-box ">
+        &nbsp; &nbsp; &nbsp; &nbsp; &copy; 2021 | &nbsp; All Rights Reserved | &nbsp; Myntra-Quiz(project) | &nbsp; 24x7 support
+    </div>
+    <!-- /.col -->
+    <!--Footer end -->
+    <!--Core JavaScript file  -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--Slider JavaScript file  -->
+    <script src="assets/ItemSlider/js/modernizr.custom.63321.js"></script>
+    <script src="assets/ItemSlider/js/jquery.catslider.js"></script>
+    <script>
+        $(function() {
+
+            $('#mi-slider').catslider();
+
+        });
+    </script>
+    <script>
+        var q1;
+        var q2;
+        var q3;
+        var q4;
+        filterSelection("all")
+        filterSelection1("all")
+        filterSelection2("all")
+        filterSelection3("all")
+
+        function filterSelection(c) {
+            q1 = c;
+        }
+
+        function filterSelection1(d) {
+            q2 = d;
+        }
+
+        function filterSelection1(e) {
+            q3 = e;
+        }
+
+        function filterSelection3(f) {
+            q4 = f;
+            fs();
+        }
+
+        function fs() {
+            var x, i, c, d, e, f;
+            c = q1;
+            d = q2;
+            e = q3;
+            f = q4;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            if (d == "all") d = "";
+            if (e == "all") e = "";
+            if (f == "all") f = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (((x[i].className.indexOf(c) > -1 || x[i].className.indexOf(d) > -1) || x[i].className.indexOf(e) > -1) || x[i].className.indexOf(f) > -1) w3AddClass(x[i], "show");
+            }
+
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+    </script>
+</body>
+
+</html>
